@@ -13,7 +13,7 @@
 
 .btn-main {
   color: #333;
-  background: #ffbc00; }
+  background: #ffbb00f6; }
 
 .btn-light {
   color: #333;
@@ -26,10 +26,10 @@
 button[class^="btn-"]:hover,
 a[class^="btn-"]:hover,
 input[class^="btn-"]:hover {
-  background: #ffbc00; }
+  background: #ffbb00f6; }
 
 .bg-main {
-  background: #ffbc00;
+  background: #ffbb00f6;
   color: #fff; }
 
 .bg-dark {
@@ -86,9 +86,83 @@ input[class^="btn-"]:hover {
 .bottom-line {
   height: 2px;
   width: 5rem;
-  background: #ffbc00;
+  background: #ffbb00f6;
   display: block;
   margin: 0 auto 1rem auto; }
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.2rem;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3); }
+  .items .item {
+    position: relative;
+    background: #ffbb00f6;
+    overflow: hidden; }
+    .items .item::after {
+      content: "";
+      position: absolute;
+      display: block;
+      background: inherit;
+      opacity: 0.9;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      transform: scale(2) translateX(-75%) translateY(-75%) rotate(-28deg);
+      transition: transform 1.5s cubic-bezier(0.2, 1, 0.3, 1); }
+    .items .item:hover:after {
+      transform: scale(2) translateX(0) translateY(0) rotate(-28deg); }
+    .items .item img {
+      transition: all 0.5s; }
+    .items .item:hover img {
+      transform: scale(1.2); }
+    .items .item:hover .item-text {
+      opacity: 1;
+      transform: translateY(0); }
+    .items .item .item-image {
+      height: auto;
+      transform: translateZ(0);
+      display: block;
+      transition: transform 750ms cubic-bezier(0.2, 1, 0.3, 1); }
+    .items .item .item-image::before {
+      content: "";
+      display: block;
+      padding-top: 75%;
+      overflow: hidden; }
+    .items .item .item-image img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      line-height: 0; }
+    .items .item .item-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 0;
+      text-align: center;
+      z-index: 1;
+      color: #fff;
+      transform: translateY(-20%);
+      transition: opacity 2s cubic-bezier(0.2, 1, 0.3, 1), transform 1s cubic-bezier(0.2, 1, 0.3, 1); }
+    .items .item .item-text-wrap {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%); }
+    .items .item .item-text-title {
+      font-size: 2rem;
+      padding: 0 1rem;
+      margin-top: 5px; }
+    .items .item .item-text-category {
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      opacity: 0.7;
+      margin: 0; }
 
 * {
   margin: 0;
@@ -138,7 +212,7 @@ img {
     #main-nav a:hover {
       border-color: #ccc; }
     #main-nav a.current {
-      border-color: #ffbc00; }
+      border-color: #ffbb00f6; }
 
 #header-home {
   background: url("../img/showcase.jpg") no-repeat center right/cover;
@@ -154,7 +228,7 @@ img {
 #header-inner {
   background: url("../img/showcase.jpg") no-repeat 20% 30%/cover;
   height: 5.5rem;
-  border-bottom: 3px solid #ffbc00; }
+  border-bottom: 3px solid #ffbb00f6; }
 
 #home-a .specials {
   margin-top: 3rem;
@@ -162,7 +236,7 @@ img {
   grid-gap: 1rem;
   grid-template-columns: repeat(4, 1fr); }
   #home-a .specials .fas {
-    color: #ffbc00;
+    color: #ffbb00f6;
     padding-bottom: 0.4rem; }
 
 #home-b .stats {
@@ -192,7 +266,7 @@ img {
     top: 0;
     right: 0;
     font-size: 28px;
-    background: #ffbc00;
+    background: #ffbb00f6;
     color: #fff;
     border-radius: 50%;
     height: 15px;
@@ -212,7 +286,7 @@ img {
     position: relative;
     transition: all 0.5s; }
     #home-c .process-icon:hover {
-      background: #ffbc00;
+      background: #ffbb00f6;
       width: 90px;
       height: 90px;
       line-height: 90px; }
@@ -230,7 +304,7 @@ img {
 
 #about-a .bio {
   grid-area: bio;
-  border-left: 3px solid #ffbc00;
+  border-left: 3px solid #ffbb00f6;
   padding: 0.8rem; }
 
 #about-a .award-1 {
@@ -245,7 +319,7 @@ img {
 #about-a .award-1 .fas,
 #about-a .award-2 .fas,
 #about-a .award-3 .fas {
-  color: #ffbc00;
+  color: #ffbb00f6;
   margin: 1rem; }
 
 #about-b .progress {
@@ -258,7 +332,7 @@ img {
     height: 100%;
     color: #fff;
     text-align: center;
-    background-color: #ffbc00; }
+    background-color: #ffbb00f6; }
 
 #about-c .about-logos {
   display: grid;
@@ -306,4 +380,4 @@ img {
       padding: 0.5rem;
       transition: all 0.5s ease-in-out; }
       #main-footer .footer-content .social .fab:hover {
-        background: #ffbc00; }
+        background: #ffbb00f6; }
